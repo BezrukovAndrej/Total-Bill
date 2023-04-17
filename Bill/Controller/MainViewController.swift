@@ -38,6 +38,7 @@ final class MainViewController: UIViewController {
         button.backgroundColor = .purple
         button.layer.cornerRadius = 20
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 20)
+        button.addTarget(self, action: #selector(calculateButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -51,6 +52,7 @@ final class MainViewController: UIViewController {
         
         setupView()
         setConstraints()
+        addTap()
     }
     
     private func setupView() {
@@ -63,6 +65,33 @@ final class MainViewController: UIViewController {
         view.addSubview(personsView)
         view.addSubview(calculateButton)
         view.addSubview(tipsView)
+    }
+    
+    @objc func calculateButtonTapped() {
+        guard let totalBill = totalBillView.summTextField.text,
+              let totalBillInt = Int(totalBill) else { return }
+        
+        let sum = totalBillInt + totalBillInt * tipsView.tipCount / 100
+        let persons = personsView.counter
+
+        if persons == 0 {
+            descriptionLabel.text = "Enter person count"
+            descriptionLabel.textColor = .red
+        } else {
+            let result = sum / persons
+            descriptionLabel.text = "\(result) per person"
+            descriptionLabel.textColor = .black
+        }
+    }
+    
+    func addTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
 }
 
@@ -95,9 +124,9 @@ extension MainViewController {
             tipsView.topAnchor.constraint(equalTo: personsView.bottomAnchor, constant: 10),
             tipsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             tipsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            tipsView.heightAnchor.constraint(equalToConstant: 130),
+            tipsView.heightAnchor.constraint(equalToConstant: 100),
             
-            calculateButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            calculateButton.topAnchor.constraint(equalTo: tipsView.bottomAnchor, constant: 10),
             calculateButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             calculateButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             calculateButton.heightAnchor.constraint(equalToConstant: 60)
