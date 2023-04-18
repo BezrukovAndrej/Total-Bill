@@ -7,7 +7,7 @@
 ## **Использовалось**
 - No storyboard, 100% Programmatic UI
 
-## SnakeGame
+## Total-Bill
 One-screen mini total bill app.
 
 ## **Used**
