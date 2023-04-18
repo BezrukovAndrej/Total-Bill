@@ -6,14 +6,14 @@ final class PersonsView: UIView {
         let label = UILabel()
         label.text = "Persons"
         label.textColor = .gray
-        label.font = UIFont(name: "Avenir Next", size: 14)
+        label.font = .avenirNext14()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let  backgroundGrayView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .tbGray
         view.layer.cornerRadius = 20
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

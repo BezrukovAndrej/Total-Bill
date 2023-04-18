@@ -6,7 +6,7 @@ final class TipsView: UIView {
         let label = UILabel()
         label.text = "Tips"
         label.textColor = .gray
-        label.font = UIFont(name: "Avenir Next", size: 14)
+        label.font = .avenirNext14()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

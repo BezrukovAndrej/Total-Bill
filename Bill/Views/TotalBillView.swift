@@ -6,14 +6,14 @@ final class TotalBillView: UIView {
         let label = UILabel()
         label.text = "Total Bill"
         label.textColor = .gray
-        label.font = UIFont(name: "Avenir Next", size: 14)
+        label.font = .avenirNext14()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let summTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .lightGray
+        textField.backgroundColor = .tbGray
         textField.layer.cornerRadius = 20
         textField.textColor = .black
         textField.tintColor = .purple

@@ -16,10 +16,12 @@
 		912CB5FD29ED4774009977E0 /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB5FC29ED4774009977E0 /* PersonsView.swift */; };
 		912CB60129ED60DF009977E0 /* TipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB60029ED60DF009977E0 /* TipsCollectionViewCell.swift */; };
 		912CB60829ED62F4009977E0 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB60729ED62F4009977E0 /* TipsView.swift */; };
+		912CB60C29EE8974009977E0 /* UIColor + Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB60B29EE8974009977E0 /* UIColor + Extension .swift */; };
+		912CB60E29EE8BB5009977E0 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB60D29EE8BB5009977E0 /* UIFont + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		912CB5E229EC698A009977E0 /* Bill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bill.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		912CB5E229EC698A009977E0 /* TotalBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		912CB5E529EC698A009977E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912CB5E729EC698A009977E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		912CB5E929EC698A009977E0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		912CB5FC29ED4774009977E0 /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
 		912CB60029ED60DF009977E0 /* TipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCollectionViewCell.swift; sourceTree = "<group>"; };
 		912CB60729ED62F4009977E0 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
+		912CB60B29EE8974009977E0 /* UIColor + Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension .swift"; sourceTree = "<group>"; };
+		912CB60D29EE8BB5009977E0 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,7 @@
 		912CB5E329EC698A009977E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				912CB5E229EC698A009977E0 /* Bill.app */,
+				912CB5E229EC698A009977E0 /* TotalBill.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +69,7 @@
 				912CB60229ED60FB009977E0 /* Application */,
 				912CB60329ED610D009977E0 /* Controller */,
 				912CB60429ED6118009977E0 /* Views */,
+				912CB60929EE894A009977E0 /* Extension */,
 				912CB60629ED6150009977E0 /* SupportingFiles */,
 			);
 			path = Bill;
@@ -116,12 +121,29 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		912CB60929EE894A009977E0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				912CB60A29EE8952009977E0 /* UIkit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		912CB60A29EE8952009977E0 /* UIkit */ = {
+			isa = PBXGroup;
+			children = (
+				912CB60B29EE8974009977E0 /* UIColor + Extension .swift */,
+				912CB60D29EE8BB5009977E0 /* UIFont + Extension.swift */,
+			);
+			path = UIkit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		912CB5E129EC698A009977E0 /* Bill */ = {
+		912CB5E129EC698A009977E0 /* TotalBill */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 912CB5F629EC698E009977E0 /* Build configuration list for PBXNativeTarget "Bill" */;
+			buildConfigurationList = 912CB5F629EC698E009977E0 /* Build configuration list for PBXNativeTarget "TotalBill" */;
 			buildPhases = (
 				912CB5DE29EC698A009977E0 /* Sources */,
 				912CB5DF29EC698A009977E0 /* Frameworks */,
@@ -131,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = Bill;
+			name = TotalBill;
 			productName = Bill;
-			productReference = 912CB5E229EC698A009977E0 /* Bill.app */;
+			productReference = 912CB5E229EC698A009977E0 /* TotalBill.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 912CB5DD29EC698A009977E0 /* Build configuration list for PBXProject "Bill" */;
+			buildConfigurationList = 912CB5DD29EC698A009977E0 /* Build configuration list for PBXProject "TotalBill" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -164,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				912CB5E129EC698A009977E0 /* Bill */,
+				912CB5E129EC698A009977E0 /* TotalBill */,
 			);
 		};
 /* End PBXProject section */
@@ -186,8 +208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912CB60E29EE8BB5009977E0 /* UIFont + Extension.swift in Sources */,
 				912CB5FB29ED3F9F009977E0 /* TotalBillView.swift in Sources */,
 				912CB5FD29ED4774009977E0 /* PersonsView.swift in Sources */,
+				912CB60C29EE8974009977E0 /* UIColor + Extension .swift in Sources */,
 				912CB5EA29EC698A009977E0 /* MainViewController.swift in Sources */,
 				912CB60129ED60DF009977E0 /* TipsCollectionViewCell.swift in Sources */,
 				912CB60829ED62F4009977E0 /* TipsView.swift in Sources */,
@@ -387,7 +411,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		912CB5DD29EC698A009977E0 /* Build configuration list for PBXProject "Bill" */ = {
+		912CB5DD29EC698A009977E0 /* Build configuration list for PBXProject "TotalBill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				912CB5F429EC698E009977E0 /* Debug */,
@@ -396,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		912CB5F629EC698E009977E0 /* Build configuration list for PBXNativeTarget "Bill" */ = {
+		912CB5F629EC698E009977E0 /* Build configuration list for PBXNativeTarget "TotalBill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				912CB5F729EC698E009977E0 /* Debug */,

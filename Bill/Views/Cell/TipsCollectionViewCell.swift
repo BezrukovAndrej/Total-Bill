@@ -35,7 +35,7 @@ final class TipsCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        backgroundColor = .lightGray
+        backgroundColor = .tbGray
         layer.cornerRadius = 20
         
         addSubview(procentLabel)
